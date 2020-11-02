@@ -18,6 +18,9 @@ const App = () => {
 
     return (
         <div className="main-container">
+            <div className= "logo-container">
+                <img src="./images/wh-logo.png" alt="Weather Hub Logo" className="logo-img"></img>
+            </div>
             <input type="text"className="search"placeholder="Enter City"value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
             {weather.main && (
                 <div className="city">
