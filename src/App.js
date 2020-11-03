@@ -21,8 +21,13 @@ const App = () => {
             <div className= "logo-container">
                 <img src="./images/wh-logo.png" alt="Weather Hub Logo" className="logo-img"></img>
             </div>
+            <div className="search-container">
             <input type="text"className="search"placeholder="Enter City"value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
+            </div>
             {weather.main && (
+                <div className= 'mainContainer'>
+                <div className="blur">
+                </div>
                 <div className="city">
                     <h2 className="city-name">
                         <span>{weather.name}</span>
@@ -37,6 +42,8 @@ const App = () => {
                         <p>{weather.weather[0].description}</p>
                     </div>
                 </div>
+                </div>
+                
             )}
         </div>
     );
