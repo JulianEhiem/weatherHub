@@ -10,6 +10,7 @@ html, body, #root {
     background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) ), url(./images/bg-img.jpg);
     background-size: cover;
     background-position: center;
+    width: 100vw;
 }
 
 .main-container {
@@ -40,11 +41,6 @@ html, body, #root {
     background: rgba(250, 250, 250, 0.65);
 }
 
-/* .bg-image {
-    background: url(./images/clouds.jpg)  center/cover no-repeat;
-    width: 30vw;
-    overflow: hidden;
-} */
 .mainContainer {
     width: 30vw;
     position: relative;
@@ -55,31 +51,29 @@ html, body, #root {
 .blur {
     background:url(./images/sunset.jpg) no-repeat center ;
     background-size:cover;
-    -webkit-filter: blur(13px);
-    -moz-filter: blur(13px);
-    -o-filter: blur(13px);
-    -ms-filter: blur(13px);
-    filter: blur(0);
+    -webkit-filter: blur(1.5px);
+    -moz-filter: blur(1.5px);
+    -o-filter: blur(1.5px);
+    -ms-filter: blur(1.5px);
+    filter: blur(1.5px);
     position:absolute;
     width:100%;
     height: 100%;
+    min-width: 300px;
     overflow: hidden;
     z-index: 0;
 }
 
 .city {
-    /* position: absolute; */
     display: flex;
+    min-width: 300px;
     width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 40px 12%;
-    /* filter: blur(8px); */
+    padding: 40px 12% 40px 0;
     border-radius: 0;
     z-index: 2;
-    /* background-image: url(./images/clouds.jpg); */
-    /* box-shadow: 10px 10px 5px 0px rgba(15, 15, 15, 0.404); */
 }
 
 p {
@@ -123,66 +117,8 @@ p {
     z-index: 7;
 }
 
-.info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media only screen and (max-width: 600px) {
-    .search {
-        padding: 20px 15%;
-    }
-
-    .city {
-        padding: 40px 20%;
-    }
-}
-/* .city {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 40px 8%;
-    border-radius: 20px;
-    background: rgba(250, 250, 250, 0.85);
-    box-shadow: 10px 10px 5px 0px rgba(15, 15, 15, 0.404);
-}
-
-p {
-    margin-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.city-temp {
-    font-size: 5rem;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #1e2432;
-    text-align: center;
-}
-
-.city sup {
-    font-size: 0.5em;
-}
-
-.city-name {
-    font-size: 2em;
-}
-
-.city-name sup {
-    padding: 0.2em 0.6em;
-    margin-left: 0.2em;
-    border-radius: 30px;
+.weather-text {
     color: #fff;
-    background: #ff8c00;
-}
-
-.city-icon {
-    margin-top: 10px;
-    width: 100px;
-    height: 100px;
 }
 
 .info {
@@ -199,4 +135,4 @@ p {
     .city {
         padding: 40px 20%;
     }
-} */
+}
