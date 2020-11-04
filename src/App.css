@@ -26,7 +26,7 @@ html, body, #root {
 }
 .logo-img {
     display: block;
-    width: 5vw;
+    width: 8vw;
     margin: 50px auto;
 }
 
@@ -34,7 +34,7 @@ html, body, #root {
     outline: none;
     width: 17vw;
     max-width: 250px;
-    padding: 1.25rem 4%;
+    padding: 1.55rem 4%;
     border-radius: 0px;
     border: none;
     margin-bottom: 5%;
@@ -146,7 +146,7 @@ p {
 
     .logo-img {
         display: block;
-        width: 15vw;
+        width: 20vw;
         margin: 50px auto 20px auto;
     }
     .search {
