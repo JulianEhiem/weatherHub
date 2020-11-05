@@ -2,15 +2,13 @@
 WeatherHub PWA
 </h1>
 
-<!-- ![](src/images/weatherhub-project-card.png =200x) -->
+> A simple React weather Progressive Web App the utilizes the openWeather API.
 
 <h1 align="center">
 <img src="src/images/weatherhub-project-card-gh.png" alt="Weather Hub Logo">
 </h1>
 
 <br>
-
-> A simple React weather Progressive Web App the utilizes the openWeather API.
 
 ### [Live Site](https://weatherhubapp.netlify.app/)
 
