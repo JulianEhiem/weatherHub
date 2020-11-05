@@ -1,7 +1,8 @@
 # WeatherHUB PWA
 
 <h1 align="center">
-<img src="src/images/weatherhub-project-card.png" alt="Weather Hub Logo" style="width:50%">
+<!-- <img src="src/images/weatherhub-project-card.png" alt="Weather Hub Logo" style="width:50%"> -->
+![](src/images/weatherhub-project-card.png =200x)
 </h1>
 
 <br>
@@ -12,7 +13,10 @@
 
 ##Tech/Framework used
 
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - [React](https://reactjs.org/)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [React](https://reactjs.org/)
 
 ## License
 
