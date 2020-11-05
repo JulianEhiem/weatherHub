@@ -12,10 +12,10 @@
 
 ##Tech/Framework used
 
--[HTML] (https://developer.mozilla.org/en-US/docs/Web/HTML) -[CSS] (https://developer.mozilla.org/en-US/docs/Web/CSS) -[JS] (https://developer.mozilla.org/en-US/docs/Web/JavaScript) -[React] (https://reactjs.org/)
+-[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) -[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) -[JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript) -[React](https://reactjs.org/)
 
 ## License
 
 This project is licensed under the terms if the **MIT** license
 
-MIT © [JulianEhiem] (https://github.com/JulianEhiem)
+MIT © [JulianEhiem](https://github.com/JulianEhiem)
