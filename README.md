@@ -1,4 +1,6 @@
-# WeatherHUB PWA
+<h1 align="center">
+WeatherHub PWA
+</h1>
 
 <!-- ![](src/images/weatherhub-project-card.png =200x) -->
 
