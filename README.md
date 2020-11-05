@@ -12,7 +12,7 @@
 
 ### [Live Site](https://weatherhubapp.netlify.app/)
 
-##Tech/Framework used
+## Tech/Framework used
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
