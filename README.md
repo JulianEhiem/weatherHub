@@ -3,7 +3,7 @@
 <!-- ![](src/images/weatherhub-project-card.png =200x) -->
 
 <h1 align="center">
-<img src="src/images/weatherhub-project-card.png" alt="Weather Hub Logo" style="width:50px">
+<img src="src/images/weatherhub-project-card.png" alt="Weather Hub Logo" style="width:250px">
 </h1>
 
 <br>
