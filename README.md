@@ -21,6 +21,6 @@ WeatherHub PWA
 
 ## License
 
-This project is licensed under the terms if the **MIT** license
+This project is licensed under the terms of the **MIT** license
 
 MIT © [JulianEhiem](https://github.com/JulianEhiem)
