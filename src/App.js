@@ -32,6 +32,7 @@ const App = () => {
                                 </div>
                                 <div className="search-container">
                                  <input type="text"className="search"placeholder="Enter City"value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
+                                 <button>Search</button>
                                 </div>
                             </div>
                         </div>
