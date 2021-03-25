@@ -11,14 +11,37 @@ html, body, #root {
     background-size: cover;
     background-position: center;
     width: 100vw;
-}
-
-.main-container {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.blurContainer {
+    background-color: greenyellow;
+    width: 100%;
+    height: 100%;
+}
+.mainSection {
+    background-color: pink;
+    width: 537px;
+    height: 639px;
+}
+.darkenMainSection {
+    background-color: purple;
+    width: 100%;
+    height: 100%;
+}
+.displayArea {
+    background-color: cyan;
+    width: 700px;
+    height: 639px;
+    
+}
+.searchArea {
+    background-color: maroon;
+    
 }
 .logo-container {
     width: 100%;
