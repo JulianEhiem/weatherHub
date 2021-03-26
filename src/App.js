@@ -28,6 +28,17 @@ const App = () => {
                                 <div className="logo-container-2">
                                     <img src="./images/wh-logo.png" alt="Weather Hub Logo" className="logo-img-2"></img>
                                 </div>
+                                <div className="temp-city-group">
+                                    <div className="city-temp">
+                                        {/* {Math.round(weather.main.temp)} */}
+                                        65
+                                        <sup>&deg;</sup>F
+                                    </div>
+                                    <h2 className="city-name">
+                                        {/* {Math.round(weather.main.temp)} */}
+                                        New York
+                                    </h2>
+                                </div>
                             </div>
                             <div className="searchArea">
                                 <div className="logo-container">
