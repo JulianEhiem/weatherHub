@@ -148,6 +148,38 @@ html, body, #root {
     /* transform: scaleZ(2); */
 }
 
+/*======= Secondary search area =========*/
+.secondarySearchArea{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 537px;
+    height: 639px;
+    position: relative;
+}
+.newSearch{
+    display: flex;
+    align-self: center;
+    margin-top: 3rem;
+}
+.searchNew{
+    width: 275px;
+    height: 70px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    padding-left: 1rem;
+    outline: none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    margin-right: 1.5rem;
+}
+.searchNew::placeholder{
+    color: white;
+    opacity: 0.4;
+}
+
 .mainContainer {
     width: 30vw;
     position: relative;
