@@ -25,7 +25,9 @@ const App = () => {
                     <div className="theSection">
                         <div className="mainSection">
                             <div className="displayArea">
-
+                                <div className="logo-container-2">
+                                    <img src="./images/wh-logo.png" alt="Weather Hub Logo" className="logo-img-2"></img>
+                                </div>
                             </div>
                             <div className="searchArea">
                                 <div className="logo-container">

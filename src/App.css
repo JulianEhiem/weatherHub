@@ -72,12 +72,24 @@ html, body, #root {
     z-index: 200;
 }
 .displayArea {
-    display: none;
-    background-color: cyan;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
     width: 700px;
     height: 639px;
     
 }
+
+.logo-container-2{
+    width: 100%;
+    height: fit-content;
+}
+.logo-img-2{
+    width: 64px;
+    margin: 20px;
+}
+
+
 .searchArea {
     /* background-color: maroon; */
     display: flex;
