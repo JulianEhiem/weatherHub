@@ -85,25 +85,52 @@ html, body, #root {
     align-content: center;
     width: 537px;
     height: 639px;
+    position: relative;
 }
 .search-container{
     display: flex;
     flex-direction: row;
-    align-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 4.5rem;
 }
 .logo-container {
     width: 100%;
     margin-bottom: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .logo-img {
     display: block;
-    width: 8vw;
+    width: 169px;
     margin: 50px auto;
 }
 
 .search {
-    width: 200px;
-    height: 45px;
+    width: 275px;
+    height: 70px;
+    border: none;
+    padding-left: 1rem;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+}
+.search-btn {
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+    height: 70px;
+    width: 70px;
+}
+
+.search-btn:hover{
+    background-color: #57A5D1;
+    /* transform: scaleZ(2); */
 }
 
 .mainContainer {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import searchIcon from './icons/searchIcon.svg';
 
 import { fetchWeather } from './api/fetchWeather';
 import './App.css';
@@ -32,7 +33,9 @@ const App = () => {
                                 </div>
                                 <div className="search-container">
                                  <input type="text"className="search"placeholder="Enter City"value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
-                                 <button>Search</button>
+                                 <button className="search-btn">
+                                     <img src={searchIcon} alt="Search Icon"/>
+                                 </button>
                                 </div>
                             </div>
                         </div>
