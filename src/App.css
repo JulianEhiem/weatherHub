@@ -16,7 +16,9 @@ html, body, #root {
 
 .blur-container {
     position: absolute;
-    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(./images/bg-img.jpg);
+    /* background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(./images/bg-img.jpg); */
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+    /* background-color: #57A5D1; */
     background-size: cover;
     background-position: center;
     width: 100vw;
@@ -77,6 +79,7 @@ html, body, #root {
     background-color: gray;
     width: 700px;
     height: 639px;
+    justify-content: space-between;
     
 }
 
@@ -86,7 +89,7 @@ html, body, #root {
 }
 .logo-img-2{
     width: 64px;
-    margin: 20px;
+    margin: 3rem;
 }
 
 
@@ -174,6 +177,32 @@ html, body, #root {
     overflow: hidden;
     z-index: 0;
 }
+.temp-city-group{
+    display: flex;
+    flex-direction: row;
+    /* background-color: green; */
+    align-self: flex-start;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+
+}
+.city-temp {
+    display: flex;
+    /* background-color: blue; */
+    font-size: 5rem;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    z-index: 7;
+    /* margin-left: 3rem; */
+}
+.city-name {
+    /* background-color: burlywood; */
+    font-size: 2em;
+    color: #fff;
+    font-weight: lighter;
+    margin-left: 2.5rem;
+}
 
 .city {
     display: flex;
@@ -194,23 +223,10 @@ p {
     z-index: 7;
 }
 
-.city-temp {
-    font-size: 5rem;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #fff;
-    text-align: center;
-    z-index: 7;
-}
+
 
 .city sup {
     font-size: 0.5em;
-}
-
-.city-name {
-    font-size: 2em;
-    color: #fff;
-    filter: blur(0);
 }
 
 .city-name sup {
