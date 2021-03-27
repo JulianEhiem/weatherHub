@@ -49,14 +49,28 @@ const App = () => {
                                     </div>
                                     <div className="weather-details">
                                         <h3 className="section-subtitle">Weather Details</h3>
-                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim modi eos nemo officiis! Ducimus quisquam ex, amet tenetur adipisci cum explicabo dignissimos est, provident reiciendis, ullam voluptates sequi dolore!
-
-                                     </p>
+                                        <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
+                                        <p className="section-text">
+                                            
+                                            {weather.weather[0].description}
+                                        {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate non sint odit ipsam et cum iste fuga, ad tempora veniam dolorem commodi magni vero illo iure odio neque architecto. Eligendi! */}
+                                        </p>
                                     </div>
-                                    <div className="cloud-cover">
-                                        <h3 className="data-title">Cloud Cover</h3>
+                                    <div className="cloud-cover weather-datapoint">
+                                        <h3 className="data-title">Cloud Cover:</h3>
+                                        <h3 className="data-result">{weather.clouds.all}%</h3>
+                                    </div>
+                                    <div className="humidity weather-datapoint">
+                                        <h3 className="data-title">Humidity:</h3>
+                                        <h3 className="data-result">{weather.main.humidity}%</h3>
+                                    </div>
+                                    <div className="wind-speed weather-datapoint">
+                                        <h3 className="data-title">Wind speed:</h3>
                                         <h3 className="data-result">88%</h3>
-
+                                    </div>
+                                    <div className="feels-like weather-datapoint">
+                                        <h3 className="data-title">Feels like:</h3>
+                                        <h3 className="data-result"> {Math.round(weather.main.feels_like)}<sup>&deg;</sup>F </h3>
                                     </div>
                                 </div>
                             </div>

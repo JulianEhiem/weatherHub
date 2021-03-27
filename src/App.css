@@ -150,6 +150,7 @@ html, body, #root {
 
 /*======= Secondary search area =========*/
 .secondarySearchArea{
+    background-color: rgba(0, 0, 0, 0.507);
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -178,6 +179,31 @@ html, body, #root {
 .searchNew::placeholder{
     color: white;
     opacity: 0.4;
+}
+.weather-details{
+    width: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+}
+
+.weather-datapoint{
+    display: flex;
+    color: white;
+    justify-content: flex-start;
+    margin: 0 8rem;
+}
+.weather-datapoint h3{
+    margin-left: 1rem;
+}
+
+.data-title{
+    font-weight: normal;
+}
+.data-result{
+    font-weight: normal;
 }
 
 .mainContainer {
@@ -271,8 +297,8 @@ p {
 
 .city-icon {
     margin-top: 10px;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     z-index: 7;
 }
 
