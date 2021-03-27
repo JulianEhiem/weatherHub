@@ -162,6 +162,7 @@ html, body, #root {
     display: flex;
     align-self: center;
     margin-top: 3rem;
+    
 }
 .searchNew{
     width: 275px;
@@ -187,17 +188,21 @@ html, body, #root {
     flex-direction: column;
     align-self: center;
     align-items: center;
+    padding-top: 2rem;
 }
 
 .weather-datapoint{
+    position: relative;
     display: flex;
     color: white;
-    justify-content: flex-start;
-    margin: 0 8rem;
+    justify-content: space-evenly;
+    margin: 0;
+    width: 100%;
+    /* max-width: 200px; */
 }
-.weather-datapoint h3{
+/* .weather-datapoint h3{
     margin-left: 1rem;
-}
+} */
 
 .data-title{
     font-weight: normal;

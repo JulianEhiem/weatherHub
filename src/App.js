@@ -85,10 +85,7 @@ const App = () => {
             }
         }
         image();
-        let unix_timestamp = (weather.dt * 1000) - (weather.timezone * 1000);
-        let formattedTime = new Date(unix_timestamp).toLocaleTimeString("en-US")
-
-        console.log(weather.dt);
+        
         return (
             <>
                 <div className="appContainer">
@@ -109,9 +106,6 @@ const App = () => {
                                         <h2 className="city-name">
                                             {weather.name}
                                         </h2>
-                                        <h3 className="city-time">
-                                            {formattedTime}
-                                        </h3>
 
                                     </div>  
                                 </div>
@@ -135,7 +129,7 @@ const App = () => {
                                         <h3 className="data-title">Cloud Cover:</h3>
                                         <h3 className="data-result">{weather.clouds.all}%</h3>
                                     </div>
-                                    {/* <div className="humidity weather-datapoint">
+                                    <div className="humidity weather-datapoint">
                                         <h3 className="data-title">Humidity:</h3>
                                         <h3 className="data-result">{weather.main.humidity}%</h3>
                                     </div>
@@ -146,7 +140,7 @@ const App = () => {
                                     <div className="feels-like weather-datapoint">
                                         <h3 className="data-title">Feels like:</h3>
                                         <h3 className="data-result"> {Math.round(weather.main.feels_like)}<sup>&deg;</sup>F </h3>
-                                    </div> */}
+                                    </div>
                                 </div>
                             </div>
                         </div>
