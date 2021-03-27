@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import searchIcon from './icons/searchIcon.svg';
+import testback from './images/clouds.jpg';
+import n01 from './images/01n-700x639.jpg';
 
 import { fetchWeather } from './api/fetchWeather';
 import './App.css';
@@ -25,7 +27,7 @@ const App = () => {
                     <div className="mainContainer">
                         <div className="theSection">
                             <div className="mainSection">
-                                <div className="displayArea">
+                                <div className="displayArea" style={{backgroundImage: `url(${n01})`}}>
                                     <div className="logo-container-2">
                                         <img src="./images/wh-logo.png" alt="Weather Hub Logo" className="logo-img-2"></img>
                                     </div>
