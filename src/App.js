@@ -48,7 +48,7 @@ const App = () => {
                                         </button>
                                     </div>
                                     <div className="weather-details">
-                                        <h3 className="section-subtitle">Weather Details</h3>
+        <h2 className="section-subtitle">{weather.name}, {weather.sys.country}</h2>
                                         <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
                                         <p className="section-text">
                                             
@@ -60,7 +60,7 @@ const App = () => {
                                         <h3 className="data-title">Cloud Cover:</h3>
                                         <h3 className="data-result">{weather.clouds.all}%</h3>
                                     </div>
-                                    <div className="humidity weather-datapoint">
+                                    {/* <div className="humidity weather-datapoint">
                                         <h3 className="data-title">Humidity:</h3>
                                         <h3 className="data-result">{weather.main.humidity}%</h3>
                                     </div>
@@ -71,7 +71,7 @@ const App = () => {
                                     <div className="feels-like weather-datapoint">
                                         <h3 className="data-title">Feels like:</h3>
                                         <h3 className="data-result"> {Math.round(weather.main.feels_like)}<sup>&deg;</sup>F </h3>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -93,7 +93,7 @@ const App = () => {
                                         <img src="./images/wh-logo.png" alt="Weather Hub Logo" className="logo-img"></img>
                                     </div>
                                     <div className="search-container">
-                                     <input type="text"className="search"placeholder="Enter City"value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
+                                     <input type="text"className="search"id="autocomplete" placeholder="Enter City"value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
                                      <button className="search-btn">
                                          <img src={searchIcon} alt="Search Icon"/>
                                      </button>
