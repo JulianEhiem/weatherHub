@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import searchIcon from './icons/searchIcon.svg';
-import testback from './images/clouds.jpg';
-import n01 from './images/01n-700x639.jpg';
+import backupimage from './images/clouds.jpg';
+import Pictures from './components/Pictures'
+
 
 import { fetchWeather } from './api/fetchWeather';
 import './App.css';
@@ -18,8 +19,76 @@ const App = () => {
             setQuery('');
         }
     }
+    let currentImage;
 
     if (weather.main){
+        let currentIcon = weather.weather[0].icon; 
+        const image = () =>{
+            switch(currentIcon){
+                case '01n':
+                    currentImage = Pictures[0].url;
+                break;
+                case '01d':
+                    currentImage = Pictures[1].url;
+                break;
+                case '02n':
+                    currentImage = Pictures[2].url;
+                break;
+                case '02d':
+                    currentImage = Pictures[3].url;
+                break;
+                case '03n':
+                    currentImage = Pictures[4].url;
+                break;
+                case '03d':
+                    currentImage = Pictures[5].url;
+                break;
+                case '04n':
+                    currentImage = Pictures[6].url;
+                break;
+                case '04d':
+                    currentImage = Pictures[7].url;
+                break;
+                case '09n':
+                    currentImage = Pictures[8].url;
+                break;
+                case '09d':
+                    currentImage = Pictures[9].url;
+                break;
+                case '10n':
+                    currentImage = Pictures[10].url;
+                break;
+                case '10d':
+                    currentImage = Pictures[11].url;
+                break;
+                case '11n':
+                    currentImage = Pictures[12].url;
+                break;
+                case '11d':
+                    currentImage = Pictures[13].url;
+                break;
+                case '13n':
+                    currentImage = Pictures[14].url;
+                break;
+                case '13d':
+                    currentImage = Pictures[15].url;
+                break;
+                case '50n':
+                    currentImage = Pictures[16].url;
+                break;
+                case '50d':
+                    currentImage = Pictures[17].url;
+                break;
+                default:
+                    currentImage = backupimage;
+
+            }
+        }
+        image();
+        let unix_timestamp = (weather.dt * 1000) - (weather.timezone * 1000);
+        let formattedTime = new Date(unix_timestamp).toLocaleTimeString("en-US")
+
+        console.log(weather.dt);
         return (
             <>
                 <div className="appContainer">
@@ -27,7 +96,7 @@ const App = () => {
                     <div className="mainContainer">
                         <div className="theSection">
                             <div className="mainSection">
-                                <div className="displayArea" style={{backgroundImage: `url(${n01})`}}>
+                                <div className="displayArea" style={{backgroundImage: `url(${currentImage})`}}>
                                     <div className="logo-container-2">
                                         <img src="./images/wh-logo.png" alt="Weather Hub Logo" className="logo-img-2"></img>
                                     </div>
@@ -40,6 +109,10 @@ const App = () => {
                                         <h2 className="city-name">
                                             {weather.name}
                                         </h2>
+                                        <h3 className="city-time">
+                                            {formattedTime}
+                                        </h3>
+
                                     </div>  
                                 </div>
                                 <div className="secondarySearchArea">
@@ -50,7 +123,7 @@ const App = () => {
                                         </button>
                                     </div>
                                     <div className="weather-details">
-        <h2 className="section-subtitle">{weather.name}, {weather.sys.country}</h2>
+                                    <h2 className="section-subtitle">{weather.name}, {weather.sys.country}</h2>
                                         <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
                                         <p className="section-text">
                                             

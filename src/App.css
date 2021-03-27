@@ -238,10 +238,14 @@ html, body, #root {
 .temp-city-group{
     display: flex;
     flex-direction: row;
-    /* background-color: green; */
+    background-color: rgba(0, 0, 0, 0.61);
     align-self: flex-start;
-    padding-left: 3rem;
-    padding-bottom: 3rem;
+    align-content: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 475px;
+    min-width: 350px;
+    padding: 1.5rem;
 
 }
 .city-temp {
@@ -259,7 +263,18 @@ html, body, #root {
     font-size: 2em;
     color: #fff;
     font-weight: lighter;
-    margin-left: 2.5rem;
+    margin-left: 2rem;
+}
+.city-time {
+    /* background-color: burlywood; */
+    display: flex;
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: lighter;
+    justify-content: center;
+    align-self: center;
+    margin-left: 2rem;
+    line-height: 1.5rem;
 }
 
 .city {
