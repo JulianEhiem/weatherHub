@@ -7,6 +7,9 @@ import Pictures from './components/Pictures'
 import { fetchWeather } from './api/fetchWeather';
 import './App.css';
 
+const searchField = document.querySelector('#autocomplete');
+const errorBox = document.querySelector('#errorBox');
+
 const App = () => {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState({});
@@ -20,6 +23,10 @@ const App = () => {
         } 
     }
 
+    const errorMode = () => {
+        errorBox.style.display = "flex"
+    }
+
     const clickSearch = async () => {
         try{
             const data = await fetchWeather(query);
@@ -27,7 +34,7 @@ const App = () => {
             setWeather(data);
             setQuery('');
         } catch(err){
-            alert("please enter a city");
+            errorMode();
         }
     }
     let currentImage;
@@ -173,11 +180,11 @@ const App = () => {
                                         <img src="./images/wh-logo.png" alt="Weather Hub Logo" className="logo-img"></img>
                                     </div>
                                     <div className="search-container">
-                                     <input type="text"className="search"id="autocomplete" placeholder="Enter City"value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
+                                     <input type="text"className="search"id="autocomplete" placeholder="Enter City e.g London"value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
                                      <button className="search-btn" onClick={clickSearch}>
                                          <img src={searchIcon} alt="Search Icon"/>
                                      </button>
-                                     <div className="error-box">
+                                     <div className="error-box" id="errorBox">
                                          Please enter a valid city
                                      </div>
                                     </div>

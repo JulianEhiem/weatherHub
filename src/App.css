@@ -148,6 +148,15 @@ html, body, #root {
     /* transform: scaleZ(2); */
 }
 
+.error-box{
+    display: none;
+    bottom: 200px;
+    position: absolute;
+    background-color: rgb(218, 72, 72);
+    color: white;
+    padding: 0.5rem;
+}
+
 /*======= Secondary search area =========*/
 .secondarySearchArea{
     background-color: rgba(0, 0, 0, 0.507);
