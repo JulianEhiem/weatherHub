@@ -157,7 +157,7 @@ const errorBox = document.querySelector('#errorBox');
                                          Please enter a valid city
                                         </div>
                                     </div>
-                                    
+                                    <div className="details-container">
                                     <div className="weather-details">
                                     <h2 className="section-subtitle">{weather.name}, {weather.sys.country}</h2>
                                         <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
@@ -165,7 +165,20 @@ const errorBox = document.querySelector('#errorBox');
                                             {weather.weather[0].description}
                                         </p>
                                     </div>
-                                    <div className="cloud-cover weather-datapoint">
+                                    <div className="weather-deets">
+                                        <ul className="weather-deets-list">
+                                            <li className="weather-datapoint">Cloud cover: {weather.clouds.all}%</li>
+                                            <li className="weather-datapoint">Humidity: {weather.main.humidity}%</li>
+                                            <li className="weather-datapoint">Feels Like: {weather.main.feels_like}&deg;F</li>
+                                            <li className="weather-datapoint">Wind Speed: {weather.wind.speed} mph</li>
+                                            <li className="weather-datapoint">Min Temp: {weather.main.temp_min}&deg;F</li>
+                                            <li className="weather-datapoint">Max Temp: {weather.main.temp_max}&deg;F</li>
+                                        </ul>
+                                    </div>
+                                    </div>
+
+
+                                    {/* <div className="cloud-cover weather-datapoint">
                                         <h3 className="data-title">Cloud Cover:</h3>
                                         <h3 className="data-result">{weather.clouds.all}%</h3>
                                     </div>
@@ -180,7 +193,7 @@ const errorBox = document.querySelector('#errorBox');
                                     <div className="feels-like weather-datapoint">
                                         <h3 className="data-title">Feels like:</h3>
                                         <h3 className="data-result"> {Math.round(weather.main.feels_like)}<sup>&deg;</sup>F </h3>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
