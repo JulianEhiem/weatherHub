@@ -24,12 +24,25 @@ const App = () => {
 const errorBox = document.querySelector('#errorBox');
  
     const errorMode = () => {
+    if (weather.main){
+        setTimeout(() => {
+            document.querySelector('.searchNew').style.borderBottom="1px solid red"
+            document.querySelector('.error-box2').style.display="flex"
+        }, 0);
+        setTimeout(() => {
+            document.querySelector('.searchNew').style.borderBottom="1px solid white"
+            document.querySelector('.error-box2').style.display="none"
+        }, 1500);
+    } else {
         setTimeout(() => {
             document.querySelector('.error-box').style.display="flex"
-        }, 100);
-        // setTimeout(() => {
-        //     document.querySelector('.error-box').style.display="none"
-        // }, 3500);
+            document.querySelector('.search').style.borderBottom="3px solid red"
+        }, 0);
+        setTimeout(() => {
+            document.querySelector('.error-box').style.display="none"
+            document.querySelector('.search').style.borderBottom="none"
+        }, 1500);
+    }
     }
 
     const clickSearch = async () => {
@@ -140,10 +153,11 @@ const errorBox = document.querySelector('#errorBox');
                                         <button className="search-btn" onClick={clickSearch}>
                                          <img src={searchIcon} alt="Search Icon"/>
                                         </button>
-                                    </div>
-                                    <div className="error-box" id="errorBox">
+                                        <div className="error-box2" id="errorBox2">
                                          Please enter a valid city
-                                     </div>
+                                        </div>
+                                    </div>
+                                    
                                     <div className="weather-details">
                                     <h2 className="section-subtitle">{weather.name}, {weather.sys.country}</h2>
                                         <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
