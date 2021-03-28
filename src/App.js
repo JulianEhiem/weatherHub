@@ -8,7 +8,6 @@ import { fetchWeather } from './api/fetchWeather';
 import './App.css';
 
 const searchField = document.querySelector('#autocomplete');
-const errorBox = document.querySelector('#errorBox');
 
 const App = () => {
     const [query, setQuery] = useState('');
@@ -22,9 +21,15 @@ const App = () => {
             setQuery('');
         } 
     }
-
+const errorBox = document.querySelector('#errorBox');
+ 
     const errorMode = () => {
-        errorBox.style.display = "flex"
+        setTimeout(() => {
+            document.querySelector('.error-box').style.display="flex"
+        }, 100);
+        // setTimeout(() => {
+        //     document.querySelector('.error-box').style.display="none"
+        // }, 3500);
     }
 
     const clickSearch = async () => {
@@ -136,6 +141,9 @@ const App = () => {
                                          <img src={searchIcon} alt="Search Icon"/>
                                         </button>
                                     </div>
+                                    <div className="error-box" id="errorBox">
+                                         Please enter a valid city
+                                     </div>
                                     <div className="weather-details">
                                     <h2 className="section-subtitle">{weather.name}, {weather.sys.country}</h2>
                                         <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
