@@ -17,9 +17,22 @@ const App = () => {
 
             setWeather(data);
             setQuery('');
+        } 
+    }
+
+    const clickSearch = async () => {
+        try{
+            const data = await fetchWeather(query);
+
+            setWeather(data);
+            setQuery('');
+        } catch(err){
+            alert("please enter a city");
         }
     }
     let currentImage;
+
+    const searchField = document.querySelector('#autocomplete');
 
     if (weather.main){
         let currentIcon = weather.weather[0].icon; 
@@ -112,7 +125,7 @@ const App = () => {
                                 <div className="secondarySearchArea">
                                     <div className="newSearch">
                                         <input type="text"className="searchNew"placeholder="Enter City"value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
-                                        <button className="search-btn">
+                                        <button className="search-btn" onClick={clickSearch}>
                                          <img src={searchIcon} alt="Search Icon"/>
                                         </button>
                                     </div>
@@ -120,9 +133,7 @@ const App = () => {
                                     <h2 className="section-subtitle">{weather.name}, {weather.sys.country}</h2>
                                         <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
                                         <p className="section-text">
-                                            
                                             {weather.weather[0].description}
-                                        {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate non sint odit ipsam et cum iste fuga, ad tempora veniam dolorem commodi magni vero illo iure odio neque architecto. Eligendi! */}
                                         </p>
                                     </div>
                                     <div className="cloud-cover weather-datapoint">
@@ -163,9 +174,12 @@ const App = () => {
                                     </div>
                                     <div className="search-container">
                                      <input type="text"className="search"id="autocomplete" placeholder="Enter City"value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
-                                     <button className="search-btn">
+                                     <button className="search-btn" onClick={clickSearch}>
                                          <img src={searchIcon} alt="Search Icon"/>
                                      </button>
+                                     <div className="error-box">
+                                         Please enter a valid city
+                                     </div>
                                     </div>
                                 </div>
                             </div>
