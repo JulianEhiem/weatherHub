@@ -149,7 +149,7 @@ const errorBox = document.querySelector('#errorBox');
                                 </div>
                                 <div className="secondarySearchArea">
                                     <div className="newSearch">
-                                        <input type="text"className="searchNew"placeholder="Enter City"value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
+                                        <input type="text"className="searchNew"placeholder="Enter City e.g. London"value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
                                         <button className="search-btn" onClick={clickSearch}>
                                          <img src={searchIcon} alt="Search Icon"/>
                                         </button>
@@ -202,7 +202,7 @@ const errorBox = document.querySelector('#errorBox');
                                         <img src="./images/wh-logo.png" alt="Weather Hub Logo" className="logo-img"></img>
                                     </div>
                                     <div className="search-container">
-                                     <input type="text"className="search"id="autocomplete" placeholder="Enter City e.g London"value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
+                                     <input type="text"className="search"id="autocomplete" placeholder="Enter City e.g. London"value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
                                      <button className="search-btn" onClick={clickSearch}>
                                          <img src={searchIcon} alt="Search Icon"/>
                                      </button>
