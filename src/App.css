@@ -90,6 +90,7 @@ html, body, #root {
 .logo-img-2{
     width: 64px;
     margin: 3rem;
+    border: 2px #000 solid;
 }
 
 

@@ -133,7 +133,7 @@ const errorBox = document.querySelector('#errorBox');
                             <div className="mainSection">
                                 <div className="displayArea" style={{backgroundImage: `url(${currentImage})`}}>
                                     <div className="logo-container-2">
-                                        <img src="./images/wh-logo.png" alt="Weather Hub Logo" className="logo-img-2"></img>
+                                        <img src="./images/wh-icon.png" alt="Weather Hub Logo" className="logo-img-2"></img>
                                     </div>
                                     
                                     <div className="temp-city-group">
