@@ -7,7 +7,6 @@ import Pictures from './components/Pictures'
 import { fetchWeather } from './api/fetchWeather';
 import './App.css';
 
-const searchField = document.querySelector('#autocomplete');
 
 const App = () => {
     const [query, setQuery] = useState('');
@@ -21,7 +20,6 @@ const App = () => {
             setQuery('');
         } 
     }
-const errorBox = document.querySelector('#errorBox');
  
     const errorMode = () => {
     if (weather.main){
@@ -57,7 +55,6 @@ const errorBox = document.querySelector('#errorBox');
     }
     let currentImage;
 
-    const searchField = document.querySelector('#autocomplete');
 
     if (weather.main){
         let currentIcon = weather.weather[0].icon; 
