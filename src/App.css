@@ -343,7 +343,7 @@ p {
     align-items: center;
 }
 /* ================================================ Phones - small screens ================================================================ */
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 100px) and (max-width: 650px){
   
     .theSection{
         max-width: 315px;
@@ -491,17 +491,28 @@ p {
 }
 
 /* ================================================ Tablets - medium screens ================================================================ */
-@media only screen and (max-width: 1350px){
+@media only screen and (min-width: 651px) and (max-width: 1350px){
     .theSection{
-        max-width: 575px;
+        /* width: 80vw; */
+        max-width: 1237px;
+        min-width: 537px;
         height: 550px;
+        margin: 3rem;
+        box-sizing: border-box;
     }
     .mainSection{
-        max-width: 575px;
+        /* width: 400px; */
+        max-width: 1237px;
+        min-width: 537px;
         height: 550px;
+        box-sizing: border-box;
     }
     .displayArea{
-        width: 300px;
+        background-position: center;
+        background-size: auto 100%;
+        width: 40vw;
+        min-width: 300px;
+        max-width: 600px;
         height: 550px;
     }
     .logo-img-2{
@@ -524,11 +535,16 @@ p {
         font-size: 4rem;
     }
     .secondarySearchArea{
-        width: 275px;
+        width: 30vw;
+        min-width: 300px;
+        max-width: 537px;
         height: 550px;
     }
     .newSearch{
         margin-top: 1.5rem;
+    }
+    .search{
+        height: 55px;
     }
     .searchNew{
         width: 165px;
@@ -540,5 +556,24 @@ p {
     .search-btn{
         height: 55px;
         width: 55px;
+    }
+    .details-container{
+        height: 100%;
+    }
+    .weather-details{
+        width: 100%;
+        padding-top: 1rem;
+    }
+    .section-subtitle{
+        font-weight: lighter;
+    }
+    .city-icon{
+        margin-top: 0px;
+    }
+    .weather-deets-list{
+        font-size: 1.1rem;
+    }
+    .error-box2{
+        background-color: rgba(218, 72, 72, 0.63);
     }
 }
